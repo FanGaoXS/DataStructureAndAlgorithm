@@ -1,5 +1,6 @@
 import fibonacci.Fibonacci;
 import list.ArrayList;
+import list.LinkedList;
 import list.Student;
 import utils.ITimeUtil;
 import utils.TimeUtil;
@@ -26,6 +27,15 @@ public class Main {
             ints.add(i);
         }
         System.out.println("ints.contains(2) = " + ints.contains(2));
+
+        LinkedList<Character> characterLinkedList = new LinkedList<>();
+        for (int i = 97; i < 97+26; i++) {
+            characterLinkedList.add((char)i);
+            //System.out.println((char) i);
+        }
+
+        System.out.println("characterLinkedList = " + characterLinkedList);
+
 
     }
 }
