@@ -10,7 +10,7 @@ package list;
 public class LinkedList<E> extends AbstractList<E>{
 
     /**
-     * 首节点
+     * 头节点
      */
     private Node<E> first;
 
