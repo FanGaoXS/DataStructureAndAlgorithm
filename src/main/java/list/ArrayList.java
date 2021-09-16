@@ -54,6 +54,23 @@ public class ArrayList<E> extends AbstractList<E> {
         }
     }
 
+    /**
+     * 缩容（在动态数组中未使用的部分过大时缩容）
+     */
+    private void trim(){
+        int nowCapacity = elements.length;  //当前容量
+        //如果当前数组元素个数比当前容量的一半还要小，并且容量是大于默认容量的则开始缩容
+        if ( size <= nowCapacity>>1 && nowCapacity>DEFAULT_CAPACITY){
+            int newCapacity = nowCapacity>>1; //即nowCapacity/2
+            E[] newElements = (E[]) new Object[newCapacity];
+            for (int i = 0; i < size; i++) {
+                newElements[i] = elements[i];
+            }
+            elements = newElements;
+            System.out.println(nowCapacity + "缩容至" + newCapacity);
+        }
+    }
+
     public void add(E element){
         add(size,element);
     }
@@ -71,6 +88,7 @@ public class ArrayList<E> extends AbstractList<E> {
 
     public void remove(int index){
         checkIndex(index);
+        trim();         //缩容
         for (int i = index; i < size-1 ; i++) { //元素依次往前挪
             elements[i] = elements[i+1];
         }

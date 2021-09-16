@@ -1,9 +1,4 @@
-import fibonacci.Fibonacci;
 import list.ArrayList;
-import list.LinkedList;
-import list.Student;
-import utils.ITimeUtil;
-import utils.TimeUtil;
 
 /**
  * Created with IntelliJ IDEA.
@@ -15,7 +10,7 @@ import utils.TimeUtil;
 public class Main {
     public static void main(String[] args) {
 
-        ArrayList<Student> students = new ArrayList<>();
+        /*ArrayList<Student> students = new ArrayList<>();
         for (int i = 0; i < 15; i++) {
             students.add(new Student("wqk"+i,i+10));
         }
@@ -34,8 +29,15 @@ public class Main {
             //System.out.println((char) i);
         }
 
-        System.out.println("characterLinkedList = " + characterLinkedList);
+        System.out.println("characterLinkedList = " + characterLinkedList);*/
 
-
+        ArrayList<Integer> ints = new ArrayList<>();
+        for (int i = 0; i < 50; i++) {
+            ints.add(i);
+        }
+        for (int i = 0; i < 50; i++) {
+            ints.remove(0);
+        }
+        System.out.println("ints = " + ints);
     }
 }

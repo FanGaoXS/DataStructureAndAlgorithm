@@ -1,4 +1,6 @@
-package list;
+package list.singleLinked;
+
+import list.AbstractList;
 
 /**
  * Created with IntelliJ IDEA.
@@ -7,7 +9,7 @@ package list;
  * @Date: 2021/08/20/12:05
  * @Description:
  */
-public class LinkedList<E> extends AbstractList<E>{
+public class LinkedList<E> extends AbstractList<E> {
 
     /**
      * 头节点
